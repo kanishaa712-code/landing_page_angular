@@ -1,0 +1,133 @@
+/* ---------------------------------- */
+/* 💄 GLOBAL & SECTION STYLING */
+/* ---------------------------------- */
+.services {
+   
+    /* Soft gradient background ko image se replace ya blend kiya */
+    
+    /* NEW: Background Image */
+    background-image: url('./bg.jpg'); /* ⬅️ Replace with your actual image URL/path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    
+    /* Background Color Overlay for Low Opacity Effect (Blending) */
+    background-color: rgba(15, 14, 15, 0.8); /* Very light pink/white with 80% opacity */
+    background-blend-mode: overlay; /* Image aur color ko blend kiya */
+    
+    text-align: center;
+    position: relative; /* Z-index ke liye zaroori */
+    padding-bottom: 40px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif; /* Elegant font for heading */
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive heading size */
+    color: #cb2d6f; /* Deep, rich pink */
+    margin-bottom: 60px; /* More space below heading */
+    position: relative;
+    padding-bottom: 15px;
+    letter-spacing: 1px;
+    animation: fadeInDown 1s ease-out forwards; /* Heading animation */
+}
+
+/* Underline effect for H2 */
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 80px;
+    height: 4px;
+    background-color: hotpink;
+    border-radius: 2px;
+}
+
+/* ---------------------------------- */
+/* 📦 SERVICE CONTAINER & BOXES */
+/* ---------------------------------- */
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 40px; /* Space between boxes */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-box {
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 15px;
+    overflow: hidden; /* Image corners ko round karne ke liye */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft, elegant shadow */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    animation: fadeInUp 1s ease-out forwards; /* Box animation */
+    padding-bottom: 30px; /* Padding for text below image */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hover Effect for Service Boxes */
+.service-box:hover {
+    transform: translateY(-15px); /* Lift up effect */
+    box-shadow: 0 20px 50px rgba(255, 105, 180, 0.4); /* Pinker, stronger shadow */
+}
+
+.service-box img {
+    width: 100%;
+    height: 250px; /* Fixed height for images */
+    object-fit: cover; /* Images fit perfectly without distortion */
+    border-bottom: 5px solid hotpink; /* Pink border below image */
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Image Hover Effect */
+.service-box:hover img {
+    transform: scale(1.08); /* Slight zoom on image hover */
+}
+
+.service-box h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem; /* Service title size */
+    color: #e91e63; /* Bright pink for titles */
+    margin: 25px 0 15px; /* Margin for title */
+    padding: 0 20px;
+}
+
+.service-box p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    padding: 0 20px;
+}
+
+/* ---------------------------------- */
+/* 🚀 ANIMATIONS */
+/* ---------------------------------- */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation delays for staggered effect */
+.service-box:nth-child(1) { animation-delay: 0.2s; }
+.service-box:nth-child(2) { animation-delay: 0.4s; }
+.service-box:nth-child(3) { animation-delay: 0.6s; }

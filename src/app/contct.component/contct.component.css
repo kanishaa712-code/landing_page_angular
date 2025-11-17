@@ -1,0 +1,146 @@
+.contact {
+    padding: 60px 40px;
+    background-color: #ffe6f5; /* soft beauty pink */
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: hotpink;
+    margin-bottom: 40px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+}
+
+.contact-info h3 {
+    font-size: 1.7rem;
+    color: hotpink;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ff9ad5;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: hotpink;
+    box-shadow: 0 0 8px rgba(255, 105, 180, 0.5);
+}
+
+.contact-btn {
+    padding: 12px;
+    background-color: hotpink;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: black;
+    color: hotpink;
+}
+.footer {
+  background: black;
+  color: white;
+  padding: 40px 30px;
+  margin-top: 40px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-about,
+.footer-links,
+.footer-social {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-about h3 {
+  color: hotpink;
+  font-size: 1.8rem;
+}
+
+.footer-about p {
+  color: #ddd;
+  margin-top: 10px;
+}
+
+.footer-links h4,
+.footer-social h4 {
+  font-size: 1.3rem;
+  color: hotpink;
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #ddd;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: hotpink;
+}
+
+.footer-social p {
+  color: #ddd;
+  font-size: 1.1rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  color: #ccc;
+}

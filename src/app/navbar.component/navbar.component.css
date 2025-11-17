@@ -1,0 +1,58 @@
+/* Cosmetic Website Navbar CSS */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    /* Key Changes for Transparency and Floating */
+    background: transparent; /* Background clear kiya */
+    position: absolute; /* Document flow se bahar nikala */
+    top: 0; /* Upar chipka diya */
+    left: 0;
+    z-index: 1000; /* Ensure it stays on top of everything */
+    /* Padding aur Display properties same rahenge */
+    padding: 15px 40px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    /* Optional: Text shadow add kiya taaki hero image par readable rahe */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+    /* Optional: Text shadow add kiya taaki background image par readable rahe */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); 
+    margin-left: 60px;
+}
+
+.nav-links li a:hover {
+    /* Hover effect maintain kiya */
+    color: black;
+    background: pink;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-shadow: none; /* Hover par shadow hataya */
+}
+
+/* 💡 Pro Tip: Aapko hero section mein padding-top dena hoga */
+/* Taki hero content navbar ke neeche se shuru ho, agar content 'top' se shuru ho raha hai. */
+/* Example: .hero { padding-top: 80px; } */

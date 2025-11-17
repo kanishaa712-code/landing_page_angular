@@ -1,0 +1,72 @@
+/* Existing image syntax galat tha, main use theek kar raha hoon */
+/* body background ab section ke andar chala jayega */
+
+/* ---------------------------------- */
+/* 💄 SECTION STYLING (Background & Opacity) */
+/* ---------------------------------- */
+.about {
+    position: relative; /* Opacity layer ke liye zaroori */
+    padding: 80px 40px; /* Padding badhaya */
+    min-height: 80vh; /* Minimum height for a large section */
+    
+    /* Background Image Setup */
+    background-image: url('bg.avif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Optional: Parallax effect */
+    display: flex; /* Content ko center karne ke liye */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background Opacity Layer */
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Image ki opacity kam karne ke liye ispar ek semi-transparent layer lagao */
+    background-color: rgba(255, 255, 255, 0.7); /* White color, 70% opacity */
+    z-index: 1;
+}
+
+/* ---------------------------------- */
+/* 📝 CONTENT CENTERING & STYLING */
+/* ---------------------------------- */
+.about-container {
+    /* Ab flex properties ki zaroorat nahi, sirf centering aur max-width */
+    display: block; 
+    max-width: 800px; /* Content ki width set ki */
+    text-align: center; /* Pura text center karne ke liye */
+    margin: 0 auto;
+    position: relative; 
+    z-index: 2; /* Layer ko background opacity se upar rakho */
+    padding: 30px;
+}
+
+.about-text {
+    /* No flex here */
+    padding: 0;
+}
+
+.about-text h2 {
+    font-size: clamp(3rem, 6vw, 5rem); /* Heading ko bohot bada kiya */
+    color: #cc3366; /* Deep Pink */
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.about-text p {
+    font-size: clamp(1.1rem, 2vw, 1.4rem); /* Paragraph font size badhaya */
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+/* 🗑️ Hata di gayi classes */
+/* .about-img aur uske andar ki img ki zaroorat nahi hai ab */
+/* .about-img { display: none; } */

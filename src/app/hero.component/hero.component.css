@@ -1,0 +1,116 @@
+/* Existing .hero aur background properties will remain the same */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("hero.avif");
+  background-size: cover; /* Back to cover for stability */
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+  /* Parallax ke liye: */
+  background-attachment: fixed; 
+  padding-top: 80px;
+}
+
+.hero-overlay {
+  /* Overlay ko thoda soft aur subtle rakhenge */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Lighter black overlay */
+  /* Extra subtle effect ke liye */
+  backdrop-filter: brightness(0.8);
+}
+
+/* 🌟 Dynamic Elements (Floating Glitter/Particles) 🌟 */
+/* Isse cosmetic ya magical feel aayega */
+.hero::before, .hero::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 1; /* Overlay ke neeche, content ke upar */
+    pointer-events: none; /* Clicking through */
+    animation: floatEffect 15s infinite ease-in-out alternate;
+}
+
+.hero::before {
+    top: 10%;
+    left: 15%;
+    transform: scale(0.7);
+    animation-delay: 0s;
+}
+
+.hero::after {
+    bottom: 20%;
+    right: 10%;
+    transform: scale(1.2);
+    animation-delay: 5s;
+    background-color: rgba(255, 105, 180, 0.15); /* Pink tint */
+}
+
+@keyframes floatEffect {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+    50% { transform: translateY(-30px) rotate(15deg); opacity: 0.9; }
+    100% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+}
+
+
+/* 🥂 Glassmorphism Content Box 🥂 */
+.hero-content {
+  position: relative;
+  z-index: 10; /* Zada upar rakhenge */
+  color: white;
+  text-align: center;
+  padding: 50px 40px; 
+  max-width: 600px;
+  
+ 
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Typography and Button adjustments */
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4.2rem); 
+  margin-bottom: 15px;
+  letter-spacing: 3px; 
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Darker shadow */
+  margin-right: 40px;
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 2vw, 1.3rem); 
+  margin-bottom: 35px;
+  font-weight: 300;
+}
+
+/* Button remains similar to previous update, ensuring high contrast */
+.btn-hero {
+  /* ... (Previous button styles here) ... */
+  display: inline-block;
+  text-decoration: none;
+  background-color: hotpink;
+  color: #1a1a1a; 
+  padding: 14px 40px; 
+  font-size: 1.1rem; 
+  font-weight: 600;
+  border-radius: 50px; 
+  transition: all 0.4s ease-in-out; 
+  border: none; /* Border hata diya */
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.6); 
+}
+
+.btn-hero:hover {
+  background-color: white;
+  color: hotpink;
+  transform: scale(1.05); /* Zoom in on hover */
+  box-shadow: 0 15px 30px rgba(255, 105, 180, 0.8); 
+}
