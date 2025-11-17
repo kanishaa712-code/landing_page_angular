@@ -3,7 +3,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url("hero.avif");
+  background-image: url("bg1.jpg");
   background-size: cover; /* Back to cover for stability */
   background-position: center;
   display: flex;
